@@ -1,11 +1,10 @@
 import flet as ft
 
-
 def main(page: ft.Page):
     counter = ft.Text("0", size=50, data=0)
 
     def increment_click(e):
-        counter.data += 1
+        counter.data += 1 # type: ignore
         counter.value = str(counter.data)
         counter.update()
 
